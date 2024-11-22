@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>PostBook Sign Up</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f7fc;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			flex-direction: column;
+		}
+
+		h1 {
+			color: #0044cc;
+			font-size: 3em;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			font-size: 1.5em;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		/* Form Container */
+		form {
+			background-color: #ffffff;
+			padding: 30px;
+			width: 400px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			text-align: center;
+			margin-top: 20px;
+			box-sizing: border-box;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			text-align: left;
+			font-weight: bold;
+			color: #555;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="date"],
+		input[type="radio"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 1em;
+			box-sizing: border-box;
+		}
+
+		input[type="radio"] {
+			width: auto;
+			margin-right: 10px;
+			margin-left: 5px;
+		}
+
+		input[type="submit"] {
+			background-color: #0044cc;
+			color: white;
+			padding: 12px 20px;
+			font-size: 1.1em;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			width: 100%;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #0033a0;
+		}
+
+		hr {
+			border: none;
+			border-top: 1px solid #eee;
+			margin-top: 20px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #0044cc;
+			font-size: 1.1em;
+			margin-top: 20px;
+			display: block;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+
+		.gender-options {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin-left: 20px;
+		}
+
+		.gender-options label {
+			margin-right: 15px;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 600px) {
+			form {
+				width: 90%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>PostBook</h1>
+	<h3>Create account on #1 Social Media App!</h3>
+	<hr>
+	<form action="/signUp" method="post">
+		<label for="username">USERNAME : </label>
+		<input type="text" name="username" id="username" required>
+
+		<label for="email">EMAIL : </label>
+		<input type="email" name="email" id="email" required>
+
+		<label for="password">PASSWORD : </label>
+		<input type="password" name="password" id="password" required>
+
+		<label for="dob">DOB : </label>
+		<input type="date" name="dob" id="dob" required>
+
+		<label>GENDER : </label>
+		<div class="gender-options">
+			<label for="male">M</label><input type="radio" name="gender" value="M" id="male" required>
+			<label for="female">F</label><input type="radio" name="gender" value="F" id="female" required>
+			<label for="other">O</label><input type="radio" name="gender" value="O" id="other" required>
+		</div>
+
+		<input type="submit" value="SIGN UP">
+		<hr>
+		<a href="/">Already have an account? Login instead</a>
+	</form>
+</body>
+
+</html>
